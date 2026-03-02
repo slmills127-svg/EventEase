@@ -1,0 +1,32 @@
+.nav-menu[b-9quvq08be2] {
+    margin-top: 20px;
+}
+
+.nav-link[b-9quvq08be2] {
+    font-size: 1.1rem;
+    padding: 10px 16px;
+    border-radius: 6px;
+    color: #ffffff; /* High contrast for readability */
+    display: flex;
+    align-items: center;
+}
+
+.nav-link span[b-9quvq08be2] {
+    opacity: 0.85;
+    margin-right: 8px;
+}
+
+.nav-link:hover[b-9quvq08be2] {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.nav-link.active[b-9quvq08be2] {
+    background-color: #4a90e2;
+    color: #ffffff;
+}
+
+.navbar-brand[b-9quvq08be2] {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #ffffff;
+}

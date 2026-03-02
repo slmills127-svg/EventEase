@@ -1,0 +1,12 @@
+<div class="event-card">
+    <h3>@(Event?.Name ?? "Unnamed Event")</h3>
+
+    <p class="event-meta">📅 @(Event?.Date.ToShortDateString() ?? "Date TBD")</p>
+    <p class="event-meta">📍 @(Event?.Location ?? "Location TBD")</p>
+
+    <a class="details-link" href="/events/@Event?.Id">View Details</a>
+</div>
+
+@code {
+    [Parameter] public Event? Event { get; set; }
+}

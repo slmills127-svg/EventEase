@@ -1,0 +1,12 @@
+.events-title[b-egb5bcp48o] {
+    text-align: center;
+    color: #4f46e5;
+    margin-bottom: 20px;
+}
+
+.events-grid[b-egb5bcp48o] {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}

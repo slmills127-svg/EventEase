@@ -1,0 +1,88 @@
+.registration-card[b-8ecpmclts3] {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-left: 6px solid #4f46e5;
+}
+
+.registration-title[b-8ecpmclts3] {
+    text-align: center;
+    color: #4f46e5;
+    margin-bottom: 0;
+}
+
+.registration-event-name[b-8ecpmclts3] {
+    text-align: center;
+    color: #4f46e5;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.registration-date[b-8ecpmclts3] {
+    text-align: center;
+    color: #555;
+    margin-top: -5px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.form-field[b-8ecpmclts3] {
+    margin-bottom: 15px;
+    display: block;
+    width: 100%;
+}
+
+.form-label[b-8ecpmclts3] {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-input[b-8ecpmclts3] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.submit-button[b-8ecpmclts3] {
+    width: 100%;
+    padding: 10px;
+    background: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.submit-button:hover[b-8ecpmclts3] {
+    background: #3730a3;
+}
+
+.success-message[b-8ecpmclts3] {
+    color: green;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.back-to-events[b-8ecpmclts3] {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    color: #4f46e5;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.back-to-events:hover[b-8ecpmclts3] {
+    text-decoration: underline;
+}

@@ -1,0 +1,56 @@
+@page "/register/{id:int}"
+@using EventEase.Models
+@inject EventService EventService
+@inject RegistrationService RegistrationService
+@inject NavigationManager NavigationManager
+
+@if (selectedEvent is null)
+{
+    <h2 class="registration-title">Event Not Found</h2>
+    <a class="back-link" href="/events">← Back to Events</a>
+}
+else
+{
+    <div class="registration-card">
+        <h2 class="registration-title">Register for</h2>
+        <h2 class="registration-event-name">@selectedEvent.Name</h2>
+
+        <EditForm Model="registration" OnValidSubmit="HandleSubmit">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <div class="form-group">
+                <label>Name</label>
+                <InputText @bind-Value="registration.Name" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <InputText @bind-Value="registration.Email" class="form-control" />
+            </div>
+
+            <button type="submit" class="register-button">Submit Registration</button>
+        </EditForm>
+
+        <a class="back-link" href="/events">← Back to Events</a>
+    </div>
+}
+
+@code {
+    [Parameter] public int id { get; set; }
+
+    private Event? selectedEvent;
+    private EventEase.Models.Registration registration = new();
+
+    protected override void OnInitialized()
+    {
+        selectedEvent = EventService.GetEvents().FirstOrDefault(e => e.Id == id);
+        registration.EventId = id;
+    }
+
+    private void HandleSubmit()
+    {
+        RegistrationService.AddRegistration(registration);
+        NavigationManager.NavigateTo($"/events/{id}");
+    }
+}

@@ -1,0 +1,49 @@
+@page "/events/{id:int}"
+@using EventEase.Models
+@inject EventService EventService
+@inject RegistrationService RegistrationService
+
+@if (selectedEvent is null)
+{
+    <h2 class="event-title">Event Not Found</h2>
+    <a class="back-link" href="/events">← Back to Events</a>
+}
+else
+{
+    <div class="event-details-card">
+        <h2 class="event-details-title">@selectedEvent.Name</h2>
+
+        <p class="event-date">📅 @selectedEvent.Date.ToShortDateString()</p>
+        <p class="event-location">📍 @selectedEvent.Location</p>
+
+        <a class="register-button" href="/register/@selectedEvent.Id">Register</a>
+
+        @if (RegistrationService.GetRegistrationsForEvent(selectedEvent.Id).Any())
+        {
+            <h3>Registered Attendees</h3>
+            <ul>
+                @foreach (var reg in RegistrationService.GetRegistrationsForEvent(selectedEvent.Id))
+                {
+                    <li>@reg.Name (@reg.Email)</li>
+                }
+            </ul>
+        }
+        else
+        {
+            <p>No attendees have registered yet.</p>
+        }
+
+        <a class="back-link" href="/events">← Back to Events</a>
+    </div>
+}
+
+@code {
+    [Parameter] public int id { get; set; }
+
+    private Event? selectedEvent;
+
+    protected override void OnInitialized()
+    {
+        selectedEvent = EventService.GetEvents().FirstOrDefault(e => e.Id == id);
+    }
+}

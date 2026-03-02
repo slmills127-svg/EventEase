@@ -1,0 +1,61 @@
+.event-details-card {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-left: 6px solid #4f46e5;
+}
+
+/* Event title styling (matches Registration page) */
+.event-details-title {
+    text-align: center;
+    color: #4f46e5;
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Date + location styling */
+.event-date,
+.event-location {
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 8px 0;
+    color: #333;
+}
+
+/* Register button */
+.register-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 14px;
+    background: #4f46e5;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.2s ease;
+}
+
+.register-button:hover {
+    background: #3730a3;
+}
+
+/* Back link */
+.back-link {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    color: #4f46e5;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}

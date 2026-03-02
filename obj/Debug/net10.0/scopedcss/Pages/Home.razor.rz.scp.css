@@ -1,0 +1,45 @@
+.landing-container[b-rcbrpxx4mo] {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.landing-hero[b-rcbrpxx4mo] {
+    max-width: 700px;
+    text-align: center;
+}
+
+.landing-title[b-rcbrpxx4mo] {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.landing-tagline[b-rcbrpxx4mo] {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #4a4a4a;
+}
+
+.landing-description[b-rcbrpxx4mo] {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.landing-button[b-rcbrpxx4mo] {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: #4a90e2;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.2s ease;
+}
+
+.landing-button:hover[b-rcbrpxx4mo] {
+    background-color: #357ABD;
+}
